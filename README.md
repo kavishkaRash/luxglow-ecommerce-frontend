@@ -1,16 +1,55 @@
-# React + Vite
+# 🛍️ LuxGlow E-Commerce Frontend (WIP)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the frontend application for the LuxGlow e-commerce platform.  
+It is built using React and Vite.
 
-Currently, two official plugins are available:
+The project includes user interface for product browsing, admin management, and shopping features.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🚀 Tech Stack
+- React.js
+- Vite
+- JavaScript
+- Tailwind CSS (if used)
+- Axios (API integration)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 📁 Project Structure
+- components/ → Reusable UI components (Header, ProductCard, Loader)
+- pages/ → Application pages
+  - homePage.jsx
+  - loginPage.jsx
+  - productPage.jsx
+  - admin/ → Admin dashboard pages
+- utils/ → Helper functions (media upload, API calls)
+- assets/ → Images and icons
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## ✨ Features
+- Product listing UI
+- Product details page
+- Admin dashboard UI (WIP)
+- Login page UI
+- Image upload support (mediaUpload utility)
+
+---
+
+## 🛠️ Work in Progress
+- Cart functionality
+- Checkout system
+- Backend API integration
+- UI/UX improvements
+- State management optimization
+
+---
+
+## 📌 Status
+This project is currently under development (WIP).
+
+---
+
+## 👨‍💻 Author
+Kavishka Rashen
