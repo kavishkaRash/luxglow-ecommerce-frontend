@@ -44,42 +44,7 @@ export default function ProductPage() {
                             })
                             
                         }
-                         {
-                            products.map((item) => {
-                                {
-                                    return (
-                                        <div className="">
-                                            <ProductCard key={item.ProductID} product={item} />
-                                        </div>
-                                    )
-                                }
-                            })
-                            
-                        }
-                         {
-                            products.map((item) => {
-                                {
-                                    return (
-                                        <div className="">
-                                            <ProductCard key={item.ProductID} product={item} />
-                                        </div>
-                                    )
-                                }
-                            })
-                            
-                        }
-                         {
-                            products.map((item) => {
-                                {
-                                    return (
-                                        <div className="">
-                                            <ProductCard key={item.ProductID} product={item} />
-                                        </div>
-                                    )
-                                }
-                            })
-                            
-                        }
+                         
                     </div>
             }
         </div>

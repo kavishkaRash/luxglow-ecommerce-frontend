@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function ProductCard(props) {
     const product = props.product;
     
@@ -60,9 +62,9 @@ export default function ProductCard(props) {
                     </div>
 
                     {/* Elegant Action Button */}
-                    <button className="w-full py-3 rounded-2xl bg-white border border-secondary/10 text-secondary text-[11px] font-bold uppercase tracking-[0.2em] transition-all duration-300 hover:bg-accent hover:text-white hover:border-accent hover:shadow-lg hover:shadow-accent/20 active:scale-95">
+                    <Link to={"/overview/"+ product.productID} className="w-full py-3 rounded-2xl bg-white border text-center border-secondary/10 text-secondary text-[11px] font-bold uppercase tracking-[0.2em] transition-all duration-300 hover:bg-accent hover:text-white hover:border-accent hover:shadow-lg hover:shadow-accent/20 active:scale-95">
                         View Product
-                    </button>
+                    </Link>
                 </div>
             </div>
         </div>
