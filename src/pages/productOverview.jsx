@@ -1,9 +1,10 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
-import { useParams } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 import Loader from "../components/loader";
 import ImageSlider from "../components/imageSlider";
+import { addTocart, loadCart } from "../utils/addToCart";
 
 export default function ProductOverview() {
     const params = useParams();
@@ -91,12 +92,22 @@ export default function ProductOverview() {
 
                         {/* Action Buttons */}
                         <div className="flex flex-col sm:flex-row w-full gap-4 mt-12">
-                            <button className="flex-1 h-16 rounded-2xl bg-gradient-to-r from-accent to-secondary text-white font-bold uppercase tracking-widest text-xs shadow-xl shadow-accent/20 hover:opacity-90 active:scale-95 transition-all">
+                            <button onClick={() => {
+                                addTocart(product, 1);
+                                toast.success("Added to Cart")
+                            }} className="flex-1 h-16 rounded-2xl bg-gradient-to-r from-accent to-secondary text-white font-bold uppercase tracking-widest text-xs shadow-xl shadow-accent/20 hover:opacity-90 active:scale-95 transition-all">
                                 Add to Cart
                             </button>
-                            <button className="flex-1 h-16 rounded-2xl border-2 border-secondary/10 text-secondary font-bold uppercase tracking-widest text-xs hover:bg-white hover:border-secondary/20 active:scale-95 transition-all">
+                            <Link to="/checkout" state={[{
+                                productID: product.productID,
+                                name: product.name,
+                                price: product.price,
+                                labelledPrice: product.labelledPrice,
+                                image: product.images[0],
+                                quantity: 1
+                            }]} className="flex-1 h-16 rounded-2xl border-2 border-secondary/10 text-secondary font-bold flex justify-center items-center uppercase tracking-widest text-xs hover:bg-white hover:border-secondary/20 active:scale-95 transition-all" >
                                 Buy it Now
-                            </button>
+                            </Link>
                         </div>
 
                         {/* Trust Factors */}

@@ -10,7 +10,22 @@ export function loadCart() {
     return cart;
 }
 
+export function getCartTotal() {
+    const cart = loadCart();
+    let total = 0;
 
+    cart.forEach(
+        (item) => {
+            total += item.price * item.quantity
+        }
+    )
+
+    return total
+}
+
+export function getItemTotal(item, quantity) {
+    return item.price * item.quantity;
+}
 
 export function addTocart(product, quantity) {
     let cart = loadCart();
@@ -32,7 +47,7 @@ export function addTocart(product, quantity) {
             productID: product.productID,
             name: product.name,
             price: product.price,
-            labbeledPrice: product.labbeledPrice,
+            labelledPrice: product.labelledPrice,
             quantity: quantity,
             image: product.images[0]
         }
@@ -57,3 +72,5 @@ export function addTocart(product, quantity) {
     localStorage.setItem("cart", JSON.stringify(cart))
 
 }
+
+
