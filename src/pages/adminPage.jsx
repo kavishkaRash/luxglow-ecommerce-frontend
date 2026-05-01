@@ -6,6 +6,7 @@ import { BsBox2 } from "react-icons/bs";
 import { HiOutlineUser } from "react-icons/hi";
 import AdminAddNewProduct from "./admin/adminAddNewProduct";
 import UpdateAddNewProduct from "./admin/adminUpdateProduct";
+import AdminOrdersPage from "./admin/adminOrdersPage";
 
 export default function AdminPage() {
     return (
@@ -55,7 +56,7 @@ export default function AdminPage() {
                     <Routes>
                         <Route path="/" element={<h1> Dashboard</h1>}></Route>
                         <Route path="/products" element={<AdminProductPage />}></Route>
-                        <Route path="/orders" element={<h1> Orders</h1>}></Route>
+                        <Route path="/orders" element={<AdminOrdersPage />}></Route>
                         <Route path="/add-product" element={<AdminAddNewProduct />}></Route>
                         <Route path="/update-product" element={<UpdateAddNewProduct />}></Route>
                     </Routes>

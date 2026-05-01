@@ -1,12 +1,20 @@
 import { CiCircleChevDown, CiCircleChevUp } from "react-icons/ci";
 import { BiTrash } from "react-icons/bi";
 import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { getItemTotal } from "../utils/addToCart";
+import toast from "react-hot-toast";
+import axios from "axios";
+import { IoCheckmarkDoneOutline } from "react-icons/io5";
+import OrderConfirmModal from "../components/orderConfirmModal";
+
+
 
 export default function Checkout() {
     const location = useLocation();
     const [cart, setCart] = useState(location.state || []);
+    const [isOpen, setIsOpen] = useState(false);
+    const navigate = useNavigate();
 
     function getCartTotal() {
         let total = 0;
@@ -16,10 +24,14 @@ export default function Checkout() {
         return total;
     }
 
+
     return (
         <div className="w-full min-h-[calc(100vh-140px)] bg-primary/40 flex flex-col items-center py-12 px-4 font-sans">
+
             <div className="w-full max-w-[800px]">
-                
+
+                <OrderConfirmModal isOpen={isOpen} cart={cart} closeModal={() => setIsOpen(false)} />
+
                 {/* Elegant Header */}
                 <div className="mb-10 text-center">
                     <h1 className="text-secondary text-4xl font-serif italic tracking-tight">Final Review</h1>
@@ -31,7 +43,7 @@ export default function Checkout() {
                     {cart.map((item, index) => {
                         return (
                             <div key={index} className="group relative w-full bg-white/80 backdrop-blur-xl rounded-[30px] p-4 flex flex-col md:flex-row items-center gap-6 border border-white shadow-xl shadow-secondary/5 transition-all duration-500">
-                                
+
                                 {/* Product Image */}
                                 <div className="w-24 h-24 rounded-2xl overflow-hidden shadow-sm flex-shrink-0">
                                     <img className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src={item.image} alt={item.name} />
@@ -47,7 +59,7 @@ export default function Checkout() {
 
                                 {/* Quantity Controller */}
                                 <div className="flex items-center bg-primary/40 rounded-xl px-2 py-1 gap-3">
-                                    <button 
+                                    <button
                                         onClick={() => {
                                             const newCart = [...cart];
                                             if (newCart[index].quantity > 1) {
@@ -60,7 +72,7 @@ export default function Checkout() {
                                         <CiCircleChevDown size={24} />
                                     </button>
                                     <span className="font-bold text-secondary text-lg min-w-[20px] text-center">{item.quantity}</span>
-                                    <button 
+                                    <button
                                         onClick={() => {
                                             const newCart = [...cart];
                                             newCart[index].quantity += 1;
@@ -100,7 +112,7 @@ export default function Checkout() {
                 {/* Final Order Summary Card */}
                 <div className="w-full bg-white rounded-[40px] shadow-2xl shadow-secondary/10 border border-white overflow-hidden">
                     <div className="p-8 flex flex-col md:flex-row justify-between items-center gap-8">
-                        
+
                         {/* Total Label */}
                         <div className="flex flex-col text-center md:text-left">
                             <span className="text-[10px] uppercase tracking-[0.4em] font-black text-secondary/40">Grand Total Payable</span>
@@ -113,11 +125,14 @@ export default function Checkout() {
                         </div>
 
                         {/* Order Action */}
-                        <Link 
-                            to="/checkout" 
+                        <Link
+                            to="/checkout"
+                            onClick={() => {
+                                setIsOpen(true);
+                            }}
                             className="group relative overflow-hidden w-full md:w-[240px] h-16 rounded-2xl bg-secondary flex items-center justify-center transition-all duration-300 hover:shadow-xl hover:shadow-secondary/20 active:scale-95"
                         >
-                            <span className="relative z-10 text-white font-bold uppercase tracking-[0.2em] text-xs">
+                            <span className="relative z-10 text-white font-bold uppercase tracking-[0.2em] text-xs" >
                                 Confirm Order
                             </span>
                             <div className="absolute inset-0 bg-gradient-to-r from-accent to-secondary opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>

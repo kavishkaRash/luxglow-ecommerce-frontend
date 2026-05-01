@@ -27,6 +27,23 @@ export function getItemTotal(item, quantity) {
     return item.price * item.quantity;
 }
 
+export function cartItemCount() {
+    const cart = loadCart();
+    let count = 0;
+
+    cart.forEach(
+        (item) => {
+            count += item.quantity
+        }
+    )
+
+    return count
+}
+
+export function clearCart() {
+    localStorage.removeItem("cart");
+}
+
 export function addTocart(product, quantity) {
     let cart = loadCart();
 
@@ -70,6 +87,8 @@ export function addTocart(product, quantity) {
     }
 
     localStorage.setItem("cart", JSON.stringify(cart))
+
+    window.dispatchEvent(new Event("cartUpdated"));
 
 }
 
