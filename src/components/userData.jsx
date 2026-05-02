@@ -14,6 +14,7 @@ export default function UserData() {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }
+                
             })
                 .then((res) => {
                     setUser(res.data);

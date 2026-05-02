@@ -1,12 +1,32 @@
 import { useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
+import { useGoogleLogin } from "@react-oauth/google";
 
 export default function LoginPage() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
+    const googleLogin = useGoogleLogin({
+        onSuccess: (response) => {
+            axios.post(import.meta.env.VITE_API_URL + "/api/users/google-login", {
+                token: response.access_token
+            }).then((res) => {
+                localStorage.setItem("token", res.data.token)
+                toast.success("Login Successfully")
+                const user = res.data.user;
+                if (user.role == "admin") {
+                    navigate("/admin");
+                } else {
+                    navigate("/")
+                }
+            }).catch((err) => {
+                console.error("Google Login Failed:", err);
+                toast.error("Google login Failed. Please try again. ");
+            });
+        }
+    });
 
     async function login() {
         try {
@@ -131,6 +151,13 @@ export default function LoginPage() {
                             >
                                 Sign In
                             </button>
+
+                            <button
+                                onClick={googleLogin}
+                                className="mt-2 bg-gradient-to-r from-accent to-secondary hover:opacity-90 text-white font-medium tracking-widest uppercase text-sm w-full h-14 rounded-2xl shadow-xl shadow-accent/20 transition-all active:scale-[0.97]"
+                            >
+                                Google LogIn
+                            </button>
                         </div>
                     </div>
 
@@ -138,9 +165,9 @@ export default function LoginPage() {
                     <div className="text-center pt-6">
                         <p className="text-gray-600 text-sm font-light">
                             New to LuxeGlow?
-                            <button className="text-accent font-semibold ml-2 hover:underline decoration-accent/30 underline-offset-4">
+                            <Link to="/register" className="text-accent font-semibold ml-2 hover:underline decoration-accent/30 underline-offset-4">
                                 Create Account
-                            </button>
+                            </Link>
                         </p>
                     </div>
                 </div>
