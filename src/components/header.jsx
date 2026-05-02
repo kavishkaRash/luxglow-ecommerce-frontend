@@ -3,6 +3,8 @@ import { BsCart3 } from "react-icons/bs";
 import { MdMenu, MdClose } from "react-icons/md"; // Added MdClose for a better user experience
 import { Link } from "react-router-dom";
 import { cartItemCount } from "../utils/addToCart.js";
+import UserData from "./userData.jsx";
+import UserDataMobile from "./userDataMobile.jsx";
 
 export default function Header() {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -54,7 +56,7 @@ export default function Header() {
                         />
                     </div>
 
-                    
+
 
                     <div className="  absolute left-1/2 -translate-x-1/2 flex flex-col items-center">
                         <div className="flex items-center gap-8 ">
@@ -82,9 +84,14 @@ export default function Header() {
                         </div>
                     </div>
 
+
+
                     {/* Right: Cart and Desktop Links */}
                     <div className="flex items-center gap-8 ">
 
+                        <div className=" hidden lg:flex">
+                            <UserData />
+                        </div>
                         {/* Cart Link */}
                         <Link to="/cart" className="relative p-2 hover:text-accent transition-colors">
                             <BsCart3 className="text-2xl" />
@@ -130,6 +137,10 @@ export default function Header() {
                                     {link.name}
                                 </a>
                             ))}
+                            
+                            <div className=" flex lg:hidden">
+                                <UserDataMobile />
+                            </div>
                         </div>
 
                         {/* Sidebar Footer */}
