@@ -140,9 +140,9 @@ export default function LoginPage() {
                                     onChange={(e) => setPassword(e.target.value)}
                                     className="w-full h-14 px-6 rounded-2xl border-none bg-white/70 focus:bg-white focus:ring-2 focus:ring-accent/20 outline-none transition-all placeholder:text-gray-400 text-secondary"
                                 />
-                                <button className="absolute right-6 top-1/2 -translate-y-1/2 text-[10px] uppercase tracking-widest text-secondary/60 hover:text-accent font-bold">
+                                <Link to="/forgot-password" className="absolute right-6 top-1/2 -translate-y-1/2 text-[10px] uppercase tracking-widest text-secondary/60 hover:text-accent font-bold">
                                     Forgot?
-                                </button>
+                                </Link>
                             </div>
 
                             <button

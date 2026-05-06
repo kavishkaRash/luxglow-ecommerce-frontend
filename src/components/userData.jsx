@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { IoChevronDown, IoSettingsOutline, IoLogOutOutline, IoBagHandleOutline } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
 export default function UserData() {
     const [user, setUser] = useState(null);
@@ -85,10 +86,10 @@ export default function UserData() {
                                     <p className="text-[10px] uppercase tracking-widest font-bold text-gray-400">Account Access</p>
                                 </div>
                                 
-                                <button className="w-full flex items-center gap-3 px-4 py-3 rounded-2xl text-secondary hover:bg-primary transition-colors text-sm font-medium group">
+                                <Link to="/settings" className="w-full flex items-center gap-3 px-4 py-3 rounded-2xl text-secondary hover:bg-primary transition-colors text-sm font-medium group" >
                                     <IoSettingsOutline className="group-hover:text-accent transition-colors" />
                                     Account Settings
-                                </button>
+                                </Link>
                                 
                                 <button className="w-full flex items-center gap-3 px-4 py-3 rounded-2xl text-secondary hover:bg-primary transition-colors text-sm font-medium group">
                                     <IoBagHandleOutline className="group-hover:text-accent transition-colors" />
