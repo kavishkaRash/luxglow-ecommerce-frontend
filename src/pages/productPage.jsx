@@ -36,7 +36,7 @@ export default function ProductPage() {
                             products.map((item) => {
                                 {
                                     return (
-                                        <div className="">
+                                        <div>
                                             <ProductCard key={item.ProductID} product={item} />
                                         </div>
                                     )

@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { cartItemCount } from "../utils/addToCart.js";
 import UserData from "./userData.jsx";
 import UserDataMobile from "./userDataMobile.jsx";
+import SearchBar from "./searchBar.jsx";
 
 export default function Header() {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -92,6 +93,11 @@ export default function Header() {
                         <div className=" hidden lg:flex">
                             <UserData />
                         </div>
+
+                        <div className="">
+                            <SearchBar />
+                        </div>
+
                         {/* Cart Link */}
                         <Link to="/cart" className="relative p-2 hover:text-accent transition-colors">
                             <BsCart3 className="text-2xl" />

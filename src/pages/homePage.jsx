@@ -5,6 +5,8 @@ import ProductOverview from "./productOverview.jsx";
 import Cart from "./cart.jsx";
 import Checkout from "./checkout.jsx";
 import Setting from "./settings.jsx";
+import AboutUs from "./aboutUs.jsx";
+import ContactUs from "./contactUs.jsx";
 
 
 
@@ -18,8 +20,8 @@ export default function HomePage() {
             <Routes path="/">
                 <Route path="/" element={<h1>Welcome To the Home Page</h1>} />
                 <Route path="/products" element={<ProductPage />} />
-                <Route path="/contact" element={<h1>Contact Us</h1>} />
-                <Route path="/about" element={<h1>About Us</h1>} />
+                <Route path="/contact" element={<ContactUs />} />
+                <Route path="/about" element={<AboutUs />} />
                 <Route path="/cart" element={<Cart />} />
                 <Route path="/checkout" element={<Checkout />} />
                 <Route path="/overview/:id" element={<ProductOverview />} />
