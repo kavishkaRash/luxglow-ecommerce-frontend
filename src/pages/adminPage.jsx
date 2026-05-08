@@ -12,6 +12,10 @@ import toast from "react-hot-toast";
 import axios from "axios";
 import Loader from "../components/loader";
 import AdminUserPage from "./admin/adminUserPage";
+import AdminReviewPage from "./admin/adminReviewPage";
+import UpdateAddNewReview from "./admin/adminUpdateReview";
+import AdminAddNewReview from "./admin/adminAddNewReview";
+import { AdminDashboard } from "./admin/adminDashboard";
 
 export default function AdminPage() {
     const [userLoaded, setUserLoaded] = useState(false);
@@ -71,6 +75,11 @@ export default function AdminPage() {
                         <BsBox2 />
                     </Link>
 
+                    <Link to="/admin/reviews" className="w-[90%] flex items-center gap-2 p-2 rounded-lg">
+                        Reviews
+                        <BsBox2 />
+                    </Link>
+
                      <Link to="/admin/users" className="w-[90%] flex items-center gap-2 p-2 rounded-lg">
                         Users
                         <HiOutlineUser />
@@ -88,12 +97,16 @@ export default function AdminPage() {
             <div className="w-[calc(100%-300px)] h-full border-3 border-accent rounded-[20px] overflow-hidden">
                 <div className="h-full w-full max-w-full max-h-full overflow-y-scroll ">
                    { userLoaded? <Routes>
-                        <Route path="/" element={<h1> Dashboard</h1>}></Route>
+                        <Route path="/" element={<AdminDashboard />}></Route>
                         <Route path="/products" element={<AdminProductPage />}></Route>
                         <Route path="/orders" element={<AdminOrdersPage />}></Route>
                         <Route path="/users" element={<AdminUserPage />}></Route>
                         <Route path="/add-product" element={<AdminAddNewProduct />}></Route>
+                        <Route path="/add-review" element={<AdminAddNewReview/>}></Route>
+                        <Route path="/reviews" element={<AdminReviewPage />}></Route>
                         <Route path="/update-product" element={<UpdateAddNewProduct />}></Route>
+                        <Route path="/update-reviews" element={<UpdateAddNewReview />}></Route>
+
                     </Routes>: <Loader />}
                 </div>
             </div>

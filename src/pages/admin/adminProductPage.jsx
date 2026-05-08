@@ -219,7 +219,7 @@ export default function AdminProductPage() {
                                     <div className="flex flex-row gap-3 justify-end">
                                         <button
                                             onClick={() => {
-                                                navigate("/admin/update-product", {
+                                                navigate("/admin/update-reviews", {
                                                     state: item,
                                                 });
                                             }}
