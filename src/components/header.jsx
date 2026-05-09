@@ -67,7 +67,7 @@ export default function Header() {
                                     Home
                                     <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-accent transition-all group-hover:w-full"></span>
                                 </Link>
-                                <Link to="/products" className="hover:text-accent transition-colors relative group">
+                                <Link to="/products"  className="hover:text-accent transition-colors relative group">
                                     Products
                                     <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-accent transition-all group-hover:w-full"></span>
                                 </Link>

@@ -3,6 +3,7 @@ import { useEffect, useState } from "react"
 import toast from "react-hot-toast";
 import Loader from "../components/loader";
 import ProductCard from "../components/productCard";
+import Header from "../components/header";
 
 export default function ProductPage() {
 
@@ -27,7 +28,9 @@ export default function ProductPage() {
 
     return (
 
-        <div className="w-full h-[calc(100vh-140px)] bg-primary">
+        <div className="w-full h-screen bg-primary" >
+
+            <Header />
             {
                 isLoading ? <Loader />
                     :

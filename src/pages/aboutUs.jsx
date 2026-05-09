@@ -1,10 +1,12 @@
 import React from 'react';
 import { IoSparklesOutline, IoShieldCheckmarkOutline, IoHeartOutline, IoEarthOutline } from "react-icons/io5";
+import Header from '../components/header';
 
 export default function AboutUs() {
     return (
         <div className="w-full min-h-screen bg-[#FFFBFD] font-sans selection:bg-accent selection:text-white overflow-hidden">
             
+            <Header />
             {/* --- HERO SECTION: Brand Introduction --- */}
             <section className="relative px-6 pt-24 pb-20 lg:pt-32 lg:pb-32 max-w-7xl mx-auto text-center">
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary via-transparent to-transparent opacity-60 -z-10" />

@@ -7,6 +7,7 @@ import toast from "react-hot-toast";
 import axios from "axios";
 import { IoCheckmarkDoneOutline } from "react-icons/io5";
 import OrderConfirmModal from "../components/orderConfirmModal";
+import Header from "../components/header";
 
 
 
@@ -26,9 +27,9 @@ export default function Checkout() {
 
 
     return (
-        <div className="w-full min-h-[calc(100vh-140px)] bg-primary/40 flex flex-col items-center py-12 px-4 font-sans">
-
-            <div className="w-full max-w-[800px]">
+        <div className="w-full h-screen bg-primary/40 flex flex-col items-center  font-sans">
+            <Header />
+            <div className="w-full max-w-[800px] py-12 px-4">
 
                 <OrderConfirmModal isOpen={isOpen} cart={cart} closeModal={() => setIsOpen(false)} />
 

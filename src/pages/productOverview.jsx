@@ -5,6 +5,7 @@ import { Link, useParams } from "react-router-dom"
 import Loader from "../components/loader";
 import ImageSlider from "../components/imageSlider";
 import { addTocart, loadCart } from "../utils/addToCart";
+import Header from "../components/header";
 
 export default function ProductOverview() {
     const params = useParams();
@@ -24,11 +25,14 @@ export default function ProductOverview() {
     }, [params.id]); // Logic note: Added dependency to match standards, kept flow the same.
 
     return (
-        <div className="w-full min-h-[calc(100vh-140px)] bg-primary/30 flex items-center justify-center p-6 lg:p-12">
+        <div className="w-full h-screen bg-primary/30  ">
+
+
+            <Header />
             {status == "loading" && <Loader />}
             
             {status == "success" && (
-                <div className="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div className="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 flex items-center justify-center gap-12 p-6 items-center lg:p-12">
                     
                     {/* LEFT: IMAGE SECTION */}
                     <div className="w-full aspect-square flex justify-center items-center bg-white rounded-[40px] shadow-2xl shadow-secondary/5 overflow-hidden border border-white p-4 lg:p-10">

@@ -3,13 +3,15 @@ import { addTocart, getCartTotal, getItemTotal, loadCart } from "../utils/addToC
 import { BiTrash } from "react-icons/bi";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import Header from "../components/header";
 
 export default function Cart() {
     const [cart, setCart] = useState(loadCart());
 
     return (
-        <div className="w-full min-h-[calc(100vh-140px)] flex flex-col py-12 items-center bg-primary font-sans">
-            <div className="w-full max-w-[850px] px-6">
+        <div className="w-full h-screen flex flex-col items-center bg-primary font-sans">
+            <Header />
+            <div className="w-full max-w-[850px] px-6 py-12 ">
                 
                 {/* Cart Header */}
                 <div className="mb-10 text-center lg:text-left">

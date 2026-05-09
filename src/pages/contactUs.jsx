@@ -6,6 +6,7 @@ import {
     IoLogoInstagram, IoLogoFacebook, IoLogoTiktok, IoChevronDownOutline,
     IoPaperPlaneOutline, IoSparklesOutline
 } from "react-icons/io5";
+import Header from '../components/header';
 
 
 export default function ContactUs() {
@@ -56,6 +57,8 @@ export default function ContactUs() {
 
     return (
         <div className="w-full min-h-screen bg-[#FFFBFD] font-sans selection:bg-accent selection:text-white">
+
+            <Header />
 
             {/* --- 1. HERO SECTION --- */}
             <section className="relative pt-28 pb-20 px-6 text-center overflow-hidden">

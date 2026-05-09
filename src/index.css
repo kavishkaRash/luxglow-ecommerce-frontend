@@ -6,3 +6,7 @@
   --color-secondary : #9C27B0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
