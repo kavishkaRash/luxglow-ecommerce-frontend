@@ -90,6 +90,7 @@ export default function AdminAddNewProduct() {
               <option value="cream">Luxury Cream</option>    
               <option value="lotion">Velvet Lotion</option>    
               <option value="serum">Radiant Serum</option>    
+              <option value="perfume">Perfume</option>    
             </select>
           </div>
 

@@ -1,5 +1,6 @@
 import Header from "../components/header.jsx";
 import HeroSection from "./home/heroSection.jsx";
+import HomeCategorySection from "./home/homeCategorySection.jsx";
 
 export default function HomePage() {
   return (
@@ -8,6 +9,8 @@ export default function HomePage() {
       <Header />
 
       <HeroSection />
+
+      <HomeCategorySection />
 
     </div>
   );
