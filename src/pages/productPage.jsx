@@ -5,6 +5,7 @@ import Loader from "../components/loader";
 import ProductCard from "../components/productCard";
 import Header from "../components/header";
 import {useSearchParams} from "react-router-dom"
+import Footer from "./home/footer";
 
 export default function ProductPage() {
 
@@ -109,6 +110,8 @@ export default function ProductPage() {
             <div className="py-12 border-t border-secondary/5 flex justify-center">
                  <img src="/logo1.png" alt="LuxeGlow" className="h-8 opacity-20 grayscale" />
             </div>
+
+            <Footer />
         </div>
     )
 }

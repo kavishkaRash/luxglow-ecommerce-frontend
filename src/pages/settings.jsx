@@ -5,6 +5,8 @@ import { FaEdit, FaCamera, FaCheck, FaTimes } from "react-icons/fa";
 import { IoShieldCheckmarkOutline, IoPersonOutline, IoChevronForward } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import { toast } from "react-hot-toast";
+import Header from "../components/header";
+import Footer from "./home/footer";
 
 export default function Setting() {
     const [user, setUser] = useState(null);
@@ -70,13 +72,14 @@ export default function Setting() {
     }, []);
 
     return (
-        <div className="w-full min-h-screen bg-[#FFFBFD] p-6 lg:p-12 font-sans selection:bg-accent selection:text-white">
+        <div className="w-full min-h-screen bg-[#FFFBFD]  font-sans selection:bg-accent selection:text-white">
+            <Header />
             {isLoading ? (
                 <div className="h-[60vh] flex items-center justify-center">
                     <Loader />
                 </div>
             ) : (
-                <div className="max-w-4xl mx-auto animate-in fade-in slide-in-from-bottom-4 duration-700">
+                <div className="max-w-4xl mx-auto animate-in fade-in slide-in-from-bottom-4 duration-700 p-6 lg:p-12">
 
                     {/* Page Header */}
                     <header className="mb-10">
@@ -214,7 +217,7 @@ export default function Setting() {
                             </div>
 
                             {/* Security Section */}
-                            <div className="bg-secondary/5 backdrop-blur-xl rounded-[40px] p-10 border border-secondary/5 group hover:bg-white/80 transition-all duration-500">
+                            <div className="bg-secondary/5 backdrop-blur-xl rounded-[40px] p-10 border mb-10 border-secondary/5 group hover:bg-white/80 transition-all duration-500">
                                 <h2 className="text-secondary text-xs font-black uppercase tracking-[0.3em] mb-8 flex items-center gap-3">
                                     <span className="w-8 h-[1px] bg-accent/30"></span>
                                     Security & Access
@@ -238,14 +241,10 @@ export default function Setting() {
                         </div>
                     </div>
 
-                    {/* Footer Branding */}
-                    <div className="mt-12 text-center">
-                        <p className="text-[9px] uppercase tracking-[0.6em] font-black text-secondary/20 italic">
-                            LuxeGlow Exclusive Beauty Member
-                        </p>
-                    </div>
                 </div>
             )}
+
+            <Footer />
         </div>
     );
 }

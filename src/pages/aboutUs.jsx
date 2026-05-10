@@ -1,6 +1,7 @@
 import React from 'react';
 import { IoSparklesOutline, IoShieldCheckmarkOutline, IoHeartOutline, IoEarthOutline } from "react-icons/io5";
 import Header from '../components/header';
+import Footer from './home/footer';
 
 export default function AboutUs() {
     return (
@@ -115,11 +116,7 @@ export default function AboutUs() {
             </section>
 
             {/* --- FOOTER TAG --- */}
-            <footer className="py-12 border-t border-secondary/5 text-center">
-                <p className="text-[9px] uppercase tracking-[0.8em] text-secondary/20 font-black">
-                    LuxeGlow • Skin • Soul • Style
-                </p>
-            </footer>
+            <Footer />
         </div>
     );
 }

@@ -7,6 +7,7 @@ import {
     IoPaperPlaneOutline, IoSparklesOutline
 } from "react-icons/io5";
 import Header from '../components/header';
+import Footer from './home/footer';
 
 
 export default function ContactUs() {
@@ -229,9 +230,7 @@ export default function ContactUs() {
             </section>
 
             {/* Aesthetic Footer Tag */}
-            <footer className="py-12 text-center">
-                <p className="text-[9px] uppercase tracking-[1em] text-secondary/20 font-black">LuxeGlow Global Concierge</p>
-            </footer>
+            <Footer />
         </div>
     );
 }
