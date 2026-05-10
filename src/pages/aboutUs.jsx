@@ -1,7 +1,7 @@
 import React from 'react';
 import { IoSparklesOutline, IoShieldCheckmarkOutline, IoHeartOutline, IoEarthOutline } from "react-icons/io5";
 import Header from '../components/header';
-import Footer from './home/footer';
+import Footer from '../components/footer';
 
 export default function AboutUs() {
     return (

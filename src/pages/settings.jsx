@@ -6,7 +6,7 @@ import { IoShieldCheckmarkOutline, IoPersonOutline, IoChevronForward } from "rea
 import { Link } from "react-router-dom";
 import { toast } from "react-hot-toast";
 import Header from "../components/header";
-import Footer from "./home/footer";
+import Footer from "../components/footer";
 
 export default function Setting() {
     const [user, setUser] = useState(null);

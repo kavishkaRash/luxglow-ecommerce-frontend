@@ -1,5 +1,5 @@
 import Header from "../components/header.jsx";
-import Footer from "./home/footer.jsx";
+import Footer from "../components/footer.jsx";
 import HeroSection from "./home/heroSection.jsx";
 import HomeCategorySection from "./home/homeCategorySection.jsx";
 import HomeContactUs from "./home/homeContactUs.jsx";

@@ -5,7 +5,7 @@ import Loader from "../components/loader";
 import ProductCard from "../components/productCard";
 import Header from "../components/header";
 import {useSearchParams} from "react-router-dom"
-import Footer from "./home/footer";
+import Footer from "../components/footer";
 
 export default function ProductPage() {
 
