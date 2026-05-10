@@ -4,6 +4,7 @@ import { IoGiftOutline } from "react-icons/io5";
 import { MdOutlineLocalShipping } from "react-icons/md";
 import { PiHeadset } from "react-icons/pi";
 import { SlBadge } from "react-icons/sl";
+import { useNavigate } from "react-router-dom";
 
 const heroSlides = [
     {
@@ -28,6 +29,7 @@ const heroSlides = [
 
 export default function HeroSection() {
     const [currentSlide, setCurrentSlide] = useState(0);
+    const navigate = useNavigate();
 
     useEffect(() => {
         const slider = setInterval(() => {
@@ -95,10 +97,10 @@ export default function HeroSection() {
                             </p>
 
                             <div className="flex flex-wrap items-center gap-8">
-                                <button className="bg-accent hover:bg-white hover:text-secondary text-white px-12 py-5 rounded-full font-bold uppercase text-[11px] tracking-[0.3em] transition-all duration-500 shadow-2xl shadow-accent/30 active:scale-95">
+                                <button  onClick={() => navigate("/products")}  className="bg-accent hover:bg-white hover:text-secondary text-white px-12 py-5 rounded-full font-bold uppercase text-[11px] tracking-[0.3em] transition-all duration-500 shadow-2xl shadow-accent/30 active:scale-95">
                                     Shop Collection
                                 </button>
-                                <button className="group flex items-center gap-4 text-white text-[11px] font-bold uppercase tracking-[0.3em] transition-all">
+                                <button  onClick={() => navigate("/products")} className="group flex items-center gap-4 text-white text-[11px] font-bold uppercase tracking-[0.3em] transition-all">
                                     <span className="border-b border-white/20 group-hover:border-accent pb-1 transition-colors">Explore More</span>
                                     <div className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center group-hover:bg-accent group-hover:border-accent transition-all">
                                         <HiOutlineChevronRight className="text-lg" />

@@ -17,6 +17,7 @@ import Checkout from './pages/checkout.jsx';
 import Setting from './pages/settings.jsx';
 import AboutUs from './pages/aboutUs.jsx';
 import ContactUs from './pages/contactUs.jsx';
+import MyOrders from './pages/myOrders.jsx';
 
 function App() {
   return (
@@ -48,6 +49,8 @@ function App() {
 
             
             <Route path="/settings" element={<Setting />} />
+
+            <Route path="/my-orders" element={<MyOrders />} />
 
             
             <Route path="/admin/*" element={<AdminPage />} />

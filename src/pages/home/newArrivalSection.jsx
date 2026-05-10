@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import Loader from "../../components/loader";
 import ProductCard from "../../components/productCard";
+import { Link } from "react-router-dom";
 
 export default function NewArrivalSection() {
     const [products, setProducts] = useState([]);
@@ -74,7 +75,7 @@ export default function NewArrivalSection() {
 
                 {!isLoading && (
                     <div className="mt-24 flex justify-center">
-                        <button className="group flex flex-col items-center gap-4">
+                        <Link to="/products" className="group flex flex-col items-center gap-4">
                             <span className="text-[11px] font-black uppercase tracking-[0.4em] text-secondary/60 group-hover:text-accent transition-colors">
                                 View Full Collection
                             </span>
@@ -88,20 +89,14 @@ export default function NewArrivalSection() {
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                                 </svg>
                             </div>
-                        </button>
+                        </Link>
                     </div>
                 )}
             </div>
 
             {/* Custom Animation Keyframes for the Shimmer & Entrance */}
             <style>{`
-                @keyframes shimmer {
-                    100% { transform: translateX(100%); }
-                }
-                @keyframes fadeInUp {
-                    from { opacity: 0; transform: translateY(30px); }
-                    to { opacity: 1; transform: translateY(0); }
-                }
+                
             `}</style>
         </section>
     );

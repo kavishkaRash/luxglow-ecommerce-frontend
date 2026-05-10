@@ -1,4 +1,7 @@
+import { useNavigate } from "react-router-dom";
+
 export default function LuxuryPromoSection() {
+    const navigate = useNavigate();
     return (
         <section className="w-full bg-white py-28 px-6 selection:bg-accent selection:text-white overflow-hidden">
             <div className="max-w-7xl mx-auto">
@@ -79,13 +82,13 @@ export default function LuxuryPromoSection() {
                             Redefine your beauty standards with an exclusive <span className="text-white font-bold">20% off</span> on our most iconic designer bestsellers.
                         </p>
 
-                        <button className="relative w-fit group/btn bg-accent text-white px-14 py-6 rounded-full uppercase tracking-[0.3em] text-[11px] font-black transition-all duration-500 hover:shadow-2xl hover:shadow-accent/40 active:scale-95 overflow-hidden">
+                        <button onClick={()=> navigate("/products")} className="relative w-fit group/btn bg-accent text-white px-14 py-6 rounded-full uppercase tracking-[0.3em] text-[11px] font-black transition-all duration-500 hover:shadow-2xl hover:shadow-accent/40 active:scale-95 overflow-hidden">
                             <span className="relative z-10">Shop The Vault</span>
                             <div className="absolute inset-0 bg-white translate-y-full group-hover/btn:translate-y-0 transition-transform duration-500 -z-0 mix-blend-difference" />
                         </button>
                     </div>
 
-                    <div className="absolute right-12 bottom-12 md:top-1/2 md:-translate-y-1/2 md:right-24 z-20 scale-90 md:scale-100">
+                    <div className="absolute right-12 bottom-12 md:top-1/2 md:-translate-y-1/2 md:right-24 z-20 scale-90 md:scale-100 ">
                         <div className="relative w-48 h-48 md:w-64 md:h-64 rounded-full border border-white/20 backdrop-blur-xl bg-white/5 flex flex-col items-center justify-center text-white shadow-2xl animate-float">
                             
                             <div className="absolute inset-4 border border-dashed border-white/10 rounded-full animate-spin-slow" />

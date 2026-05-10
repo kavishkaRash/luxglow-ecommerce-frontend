@@ -45,7 +45,7 @@ export default function UserData() {
             )}
 
             {/* User Profile Trigger */}
-            {user && (
+            {user ? (
                 <div className="relative">
                     <button 
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -91,10 +91,10 @@ export default function UserData() {
                                     Account Settings
                                 </Link>
                                 
-                                <button className="w-full flex items-center gap-3 px-4 py-3 rounded-2xl text-secondary hover:bg-primary transition-colors text-sm font-medium group">
+                                <Link to="/my-orders" className="w-full flex items-center gap-3 px-4 py-3 rounded-2xl text-secondary hover:bg-primary transition-colors text-sm font-medium group">
                                     <IoBagHandleOutline className="group-hover:text-accent transition-colors" />
                                     My Orders
-                                </button>
+                                </Link>
                                 
                                 <div className="h-[1px] bg-secondary/5 my-1 mx-2"></div>
                                 
@@ -108,6 +108,11 @@ export default function UserData() {
                             </div>
                         </>
                     )}
+                </div>
+            ): (
+                <div className="flex items-center gap-3">
+                    <Link to="/login" className="text-sm font-bold text-accent hover:text-accent/80 transition-colors hover:cursor-pointer">Login</Link>
+                    <Link to="/register" className="text-sm font-bold text-accent hover:text-accent/80 transition-colors hover:cursor-pointer">Register</Link>
                 </div>
             )}
         </div>
