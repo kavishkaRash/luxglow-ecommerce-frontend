@@ -1,55 +1,81 @@
 # 🛍️ LuxGlow E-Commerce Frontend (WIP)
 
-This is the frontend application for the LuxGlow e-commerce platform.  
-It is built using React and Vite.
-
-The project includes user interface for product browsing, admin management, and shopping features.
+A modern and responsive e-commerce frontend application for the LuxGlow skincare platform.  
+Built using React and Vite, this project focuses on scalable UI architecture and real-world e-commerce user experience.
 
 ---
 
-## 🚀 Tech Stack
+## 🚀 Live Demo
+https://luxglows.netlify.app
+
+---
+
+## 📌 Project Overview
+LuxGlow Frontend is a UI-based e-commerce application that allows users to browse products, view product details, and interact with an admin-style interface.
+
+This project is built to simulate a real-world online shopping experience with a focus on clean UI, reusable components, and scalable structure.
+
+---
+
+## 🛠️ Tech Stack
 - React.js
 - Vite
-- JavaScript
+- JavaScript (ES6+)
 - Tailwind CSS (if used)
 - Axios (API integration)
 
 ---
 
 ## 📁 Project Structure
-- components/ → Reusable UI components (Header, ProductCard, Loader)
-- pages/ → Application pages
-  - homePage.jsx
-  - loginPage.jsx
-  - productPage.jsx
-  - admin/ → Admin dashboard pages
-- utils/ → Helper functions (media upload, API calls)
-- assets/ → Images and icons
+components/ → Reusable UI components (Header, ProductCard, Loader)  
+pages/ → Application pages  
+- homePage.jsx  
+- loginPage.jsx  
+- productPage.jsx  
+- admin/ → Admin dashboard pages  
+
+utils/ → Helper functions (API calls, media upload)  
+assets/ → Images and static resources  
 
 ---
 
 ## ✨ Features
-- Product listing UI
-- Product details page
-- Admin dashboard UI (WIP)
-- Login page UI
-- Image upload support (mediaUpload utility)
+- Responsive product listing UI  
+- Product details page  
+- Login page UI  
+- Admin dashboard UI (Work in progress)  
+- Image upload utility support  
+- Clean component-based architecture  
+
+---
+
+## 🧠 Key Learnings
+- React component-based architecture  
+- API integration using Axios  
+- Frontend routing and page structuring  
+- UI/UX design principles for e-commerce apps  
+- Project organization and scalability  
 
 ---
 
 ## 🛠️ Work in Progress
-- Cart functionality
-- Checkout system
-- Backend API integration
-- UI/UX improvements
-- State management optimization
+- Cart functionality  
+- Checkout system  
+- Full backend integration  
+- State management improvements  
+- Performance optimization  
 
 ---
 
-## 📌 Status
-This project is currently under development (WIP).
+## 📌 Project Status
+
+Under active development (MVP stage)
 
 ---
 
 ## 👨‍💻 Author
-Kavishka Rashen
+D. Kavishka Rashen  
+Full Stack Developer (MERN / Next.js)
+
+GitHub: https://github.com/kavishkaRash  
+Portfolio: https://kavishka-portfolio.netlify.app
