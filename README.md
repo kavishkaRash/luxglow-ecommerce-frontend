@@ -13,15 +13,15 @@ https://luxglows.netlify.app
 ## 📌 Project Overview
 LuxGlow Frontend is a UI-based e-commerce application that allows users to browse products, view product details, and interact with an admin-style interface.
 
-This project is built to simulate a real-world online shopping experience with a focus on clean UI, reusable components, and scalable structure.
+This project is designed to simulate a real-world e-commerce system with a focus on clean UI, reusable components, and scalable frontend architecture.
 
 ---
 
 ## 🛠️ Tech Stack
-- React.js
-- Vite
-- JavaScript (ES6+)
-- Tailwind CSS (if used)
+- React.js  
+- Vite  
+- JavaScript (ES6+)  
+- Tailwind CSS (if used)  
 - Axios (API integration)
 
 ---
@@ -42,10 +42,11 @@ assets/ → Images and static resources
 ## ✨ Features
 - Responsive product listing UI  
 - Product details page  
-- Login page UI  
+- Authentication UI (Login page)  
 - Admin dashboard UI (Work in progress)  
-- Image upload utility support  
+- Image upload support  
 - Clean component-based architecture  
+- API integration ready structure  
 
 ---
 
@@ -53,28 +54,28 @@ assets/ → Images and static resources
 - React component-based architecture  
 - API integration using Axios  
 - Frontend routing and page structuring  
-- UI/UX design principles for e-commerce apps  
-- Project organization and scalability  
+- State management basics  
+- UI/UX design for e-commerce systems  
+- Project structuring for scalability  
 
 ---
 
 ## 🛠️ Work in Progress
 - Cart functionality  
 - Checkout system  
-- Full backend integration  
-- State management improvements  
-- Performance optimization  
+- Backend API integration  
+- State management optimization  
+- Performance improvements  
 
 ---
 
 ## 📌 Project Status
-
-Under active development (MVP stage)
+🚧 Under active development (MVP stage)
 
 ---
 
 ## 👨‍💻 Author
-D. Kavishka Rashen  
+**D. Kavishka Rashen**  
 Full Stack Developer (MERN / Next.js)
 
 GitHub: https://github.com/kavishkaRash  
